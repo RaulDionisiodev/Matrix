@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Formulário</title>
+   <!-- <link rel="stylesheet" type="text/css" href="formulario.css" /> --> 
+    <link rel="stylesheet" href="css/materialize.css" />   
+  </head>
+  
+  
+  <body>
+    <div class="container">
+      
+        <div class="input-field ">
+          <div class="row">
+              <label for="email">Endereço de e-mail:</label>
+              <input type="email" name="email"/>
+          </div>
+        </div>
+
+     <div class="input-field"> 
+           <div class="row">
+             <label for="nome">Nome:</label>
+             <input type="text" name="nome">
+           </div> 
+      </div>
+      
+          
+            <div class="input-field inline">
+              
+                  <select>
+                  <option value="" disabled selected> </option>
+                  <option value="masculino"> Masculino </option>
+                  <option value="feminino"> Feminino </option>
+                  </select>
+
+                <label>Sexo</label>  
+                       
+            </div>     
+      
+      
+           <!--      
+            <div class="input-field col s12">
+               <label for="datanascimento">Data nascimento:</label>
+               <input type="date" name="datanascimento">
+            </div>        
+            -->
+
+      
+      
+        
+        
+          <div class="input-field inline" >  
+              
+              <select>
+              <option value=""disabled selected></option>
+              <option value="informatica">Tecnico em Informática</option>
+              <option value="alimentos">Tecnico em Alimentos</option>
+              <option value="agropecuaria">Tecnico em Agropecuária</option>
+              </select> 
+
+              <label>cursos:</label>
+          </div>
+      
+      
+      
+      
+      
+      <div class="input-field">
+         <div class="row"> 
+           <label for="endereco">Endereço para correspondência:</label>
+           <input type="text" name="endereco" id="endereco"/>
+         </div>  
+      </div>
+
+
+
+
+       <div class="input-field">
+          <div class="row">
+
+            <label for="complemento">Complemento do Endereço:</label>
+            <input type="text" name="complemento" id="complemento" />
+          </div>    
+      
+      </div>
+      
+        <div class="input-field">      
+          <div class="row">
+            <label for="cep">CEP:</label>
+            <input type="text" name="cep" id="cep" />
+          </div>
+        </div>
+
+
+       <div class="input-field inline">      
+          <!--<div class="row">-->
+           <label for="municipio">Município:</label>
+           <input type="text" name="municipio" id="municipio"/>
+            
+            <select class="browser-default">
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AM">AM</option>
+            <option value="AP">AP</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MG">MG</option>
+            <option value="MS">MS</option>
+            <option value="MT">MT</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="PR">PR</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS" selected>RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SE">SE</option>
+            <option value="SP">SP</option>
+            <option value="TO">TO</option>
+            </select>
+         <!-- </div> -->       
+        </div>
+
+      
+       <div class="row">
+          <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+       </div>
+      
+        <div class="row">
+          <input class="waves-effect waves-light btn" type="reset" value="limpar dados">        
+        </div>      
+             
+    </div>
+
+  </body>
+  
+  <script src="jquery-3.2.1.js"> </script>
+  <script src="js/materialize.js"> </script>
+  <script type="text/javascript" src="js/form.js"></script>
+</html>
