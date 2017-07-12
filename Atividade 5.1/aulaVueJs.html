@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJS Basics</title>
+	<!--<script src="../vue.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
+</head>
+
+<body>	
+	<div id="message">
+		<p>{{ resultado }}</p>
+		{{ aulavuejs }}
+		<hr>
+		<input v-model="resultado" type="text" />	
+		<select>
+			<option value="" selected></option>
+  			<!-- inline object literal -->
+  			<option v-for="s in selected" v-bind:value="s.value">
+				  {{s.text}}
+			</option>
+		</select>
+		<hr>
+		<button id="btnSalvar" @click="salvar">Salvar</button>	
+	</div>
+	
+	
+	<script>
+		new Vue({
+			el: "#message",
+			data: function (){
+				return {
+					aulavuejs: "Projeto Matrix",
+					resultado: "Agora foi",
+					selected: [
+						{text:"Masculino", value:"1"},
+						{text:"Feminino", value:"2"},
+						{text:"Não sei", value:"3"},
+						{text:"Todos eles", value:"4"}
+					]};
+			},
+			methods: {
+				salvar: function (){					
+					localStorage.setItem("cadastro", this.resultado);
+                    				
+				}				
+			},
+			created: function() {				
+				var valorResultado = localStorage.getItem("cadastro");
+					if(valorResultado){
+						this.resultado = valorResultado;
+					}
+			}
+		});
+	</script>
+</body>
+</html>
